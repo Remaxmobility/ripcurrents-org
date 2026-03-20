@@ -10,6 +10,7 @@ const links = [
   { label: 'Identify',    href: '#identify' },
   { label: 'Research',    href: '#research' },
   { label: 'Resources',   href: '/resources' },
+  { label: '🎤 Comedy Night', href: '/comedy-night' },
 ]
 
 export default function Nav() {
