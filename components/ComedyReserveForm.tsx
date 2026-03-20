@@ -26,9 +26,7 @@ export default function ComedyReserveForm({ ticketUrl }: Props) {
       message: formData.get('message') as string,
     }
 
-    // POST to Formspree — set NEXT_PUBLIC_FORMSPREE_ID in .env.local
-    // Get your free form ID at https://formspree.io/forms/new
-    const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? 'xpwdgklp'
+    const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? 'mzdjwjwy'
 
     try {
       const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
