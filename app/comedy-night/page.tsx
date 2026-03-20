@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 
 // ── Update names below once confirmed ───────────────────────────────────────
 const COMEDIANS = [
-  { name: 'Comedian TBA', img: '/comedy/comedian-1.jpg', bio: "Yuk Yuk's featured comedian" },
-  { name: 'Comedian TBA', img: '/comedy/comedian-2.jpg', bio: "Yuk Yuk's featured comedian" },
-  { name: 'Comedian TBA', img: '/comedy/comedian-3.jpg', bio: "Yuk Yuk's featured comedian" },
+  { name: 'DK Phan',     img: '/comedy/comedian-1.jpg', bio: "Yuk Yuk's featured comedian" },
+  { name: 'Andrew Barr', img: '/comedy/comedian-2.jpg', bio: "Yuk Yuk's featured comedian" },
+  { name: 'Chuck Byrn',  img: '/comedy/comedian-3.jpg', bio: "Yuk Yuk's featured comedian" },
 ]
 
 const TICKET_URL = 'https://www.zeffy.com/en-CA/ticketing/rip-roaring-comedy-night'
