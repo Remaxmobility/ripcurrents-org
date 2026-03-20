@@ -17,12 +17,6 @@ const HeroScene = dynamic(() => import('./HeroScene'), {
   ),
 })
 
-const STATS = [
-  { value: '71', label: 'avg. U.S. rip current deaths per year' },
-  { value: '80%', label: 'of all beach rescue operations' },
-  { value: '60K+', label: 'people rescued annually' },
-]
-
 export default function HeroSection() {
   const [visible, setVisible] = useState(false)
 
@@ -46,19 +40,11 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-        {/* Alert badge */}
-        <div
-          className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-danger-orange/40
-                      bg-danger-orange/10 text-danger-orange text-xs font-semibold tracking-wider uppercase
-                      mb-8 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{ transitionDelay: '0ms' }}
-        >
-          <span className="w-2 h-2 rounded-full bg-danger-orange animate-pulse-slow inline-block" />
-          Great Lakes Rip Current Awareness
-        </div>
-
+      {/* Content — absolutely centred in the space below the 80px nav */}
+      <div
+        className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center"
+        style={{ top: 80 }}
+      >
         {/* Main heading */}
         <h1
           className={`text-display-xl text-white glow-text mb-4
@@ -68,11 +54,7 @@ export default function HeroSection() {
           <span className="block">KNOW THE</span>
           <span
             className="block"
-            style={{
-              WebkitTextStroke: '2px #00B4D8',
-              color: 'transparent',
-              textShadow: 'none',
-            }}
+            style={{ WebkitTextStroke: '2px #00B4D8', color: 'transparent', textShadow: 'none' }}
           >
             CURRENT.
           </span>
@@ -114,29 +96,10 @@ export default function HeroSection() {
             What Is a Rip Current?
           </Link>
         </div>
-
-        {/* Quick stats row */}
-        <div
-          className={`mt-16 flex flex-col sm:flex-row gap-8 sm:gap-16 transition-all duration-700
-                      ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-          style={{ transitionDelay: '600ms' }}
-        >
-          {STATS.map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="font-display text-3xl md:text-4xl text-danger-orange danger-glow">
-                {s.value}
-              </div>
-              <div className="text-xs text-ocean-foam/50 font-body max-w-[140px] mx-auto leading-tight mt-1">
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-        <span className="text-xs text-ocean-foam/40 font-body tracking-widest uppercase">Scroll</span>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <div className="w-px h-10 bg-gradient-to-b from-ocean-teal/60 to-transparent animate-scroll-hint" />
       </div>
     </section>

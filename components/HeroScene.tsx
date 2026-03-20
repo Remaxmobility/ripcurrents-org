@@ -267,7 +267,7 @@ export default function HeroScene() {
       camera={{ position: [0, 3.8, 7.2], fov: 55 }}
       gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
       dpr={[1, 1.5]}
-      style={{ position: 'absolute', inset: 0 }}
+      style={{ position: 'absolute', inset: 0, zIndex: 0 }}
     >
       <Scene />
     </Canvas>
