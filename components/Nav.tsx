@@ -5,12 +5,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const links = [
-  { label: 'What Is It',  href: '#what-is' },
-  { label: 'Survive',     href: '#survive' },
-  { label: 'Identify',    href: '#identify' },
-  { label: 'Research',    href: '#research' },
-  { label: 'Resources',   href: '/resources' },
-  { label: '🎤 Comedy Night', href: '/comedy-night' },
+  { label: 'Learn',        href: '/learn' },
+  { label: 'Families',     href: '/families' },
+  { label: 'Schools',      href: '/schools' },
+  { label: 'Resources',    href: '/resources' },
+  { label: 'About',        href: '/about' },
 ]
 
 export default function Nav() {
@@ -38,7 +37,7 @@ export default function Nav() {
           <div className="relative w-10 h-10 flex-shrink-0">
             <Image
               src="/favicon.ico"
-              alt="RIP Currents logo"
+              alt="[Organization] logo"
               width={40}
               height={40}
               className="w-full h-full object-contain group-hover:brightness-125 transition-all duration-300"
@@ -47,10 +46,10 @@ export default function Nav() {
           </div>
           <div>
             <span className="font-display text-xl text-white tracking-widest">
-              RIP CURRENTS
+              RIP CURRENT INFO
             </span>
             <span className="block text-xs text-ocean-teal/70 font-body tracking-wider -mt-1">
-              ripcurrents.org
+              ripcurrentinfo.org
             </span>
           </div>
         </Link>
@@ -73,7 +72,7 @@ export default function Nav() {
         <div className="hidden md:flex items-center gap-3">
           {/* Instagram */}
           <a
-            href="https://www.instagram.com/ripcurrent_information_project"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 text-ocean-teal/60 hover:text-ocean-teal transition-colors duration-200"
@@ -87,7 +86,7 @@ export default function Nav() {
           </a>
           {/* Facebook */}
           <a
-            href="https://www.facebook.com/ripcurrents.org"
+            href="https://www.facebook.com/ripcurrentinfo.org"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 text-ocean-teal/60 hover:text-ocean-teal transition-colors duration-200"
@@ -99,7 +98,7 @@ export default function Nav() {
           </a>
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/company/ripcurrents-org"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 text-ocean-teal/60 hover:text-ocean-teal transition-colors duration-200"
@@ -112,7 +111,7 @@ export default function Nav() {
             </svg>
           </a>
           <Link
-            href="#contact"
+            href="/get-involved"
             className="ml-1 px-5 py-2.5 rounded-full bg-danger-gradient text-white text-sm font-semibold font-body
                        hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105 active:scale-100
                        transition-all duration-200 cursor-pointer"
@@ -158,7 +157,7 @@ export default function Nav() {
             ))}
           </ul>
           <Link
-            href="#contact"
+            href="/get-involved"
             onClick={() => setMenuOpen(false)}
             className="mt-6 block text-center px-6 py-3 rounded-full bg-danger-gradient text-white font-semibold font-body"
           >

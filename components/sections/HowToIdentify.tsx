@@ -41,7 +41,7 @@ const SIGNS = [
   },
   {
     title: 'Near Structures',
-    desc:  'Rip currents frequently form adjacent to piers, jetties, groins, breakwaters, or rock outcroppings where water funnels.',
+    desc:  'rip current frequently form adjacent to piers, jetties, groins, breakwaters, or rock outcroppings where water funnels.',
     color: '#00B4D8',
   },
   {
@@ -79,14 +79,14 @@ export default function HowToIdentify() {
             <span style={{ WebkitTextStroke: '2px #00B4D8', color: 'transparent' }}>
               IDENTIFY
             </span>{' '}
-            A RIP CURRENT
+            A rip current
           </h2>
 
           <p
             className={`max-w-2xl mx-auto text-ocean-foam/70 font-body text-base leading-relaxed transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
             style={{ transitionDelay: '200ms' }}
           >
-            Rip currents are difficult to identify from water level. Always scout the beach from
+            rip current are difficult to identify from water level. Always scout the beach from
             an elevated position — a dune, pier, or boardwalk — before entering the water. Look
             for these warning signs:
           </p>
@@ -120,7 +120,7 @@ export default function HowToIdentify() {
         >
           <div className="font-display text-ocean-teal text-3xl mb-4">PRO TIP</div>
           <p className="text-ocean-foam/80 font-body leading-relaxed text-base">
-            The best way to learn to spot rip currents is through <strong className="text-white">hands-on
+            The best way to learn to spot rip current is through <strong className="text-white">hands-on
             education</strong>. Fluorescein dye — used in our field demonstrations — creates a vivid
             visual of current flow, revealing the exact channel and helping people recognize these
             patterns in real water. Ask your municipality or beach authority to arrange a demonstration.

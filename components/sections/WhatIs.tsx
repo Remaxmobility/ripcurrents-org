@@ -55,7 +55,7 @@ function RipCurrentDiagram() {
           SHORELINE / BEACH
         </text>
 
-        {/* Rip current channel */}
+        {/* rip current channel */}
         <rect x="200" y="60" width="80" height="230" fill="url(#ripGrad)" opacity="0.85" />
         <text x="240" y="52" textAnchor="middle" fill="#F97316" fontSize="11" fontFamily="Source Sans 3,sans-serif" fontWeight="700" filter="url(#glow)">
           RIP CURRENT CHANNEL
@@ -93,7 +93,7 @@ function RipCurrentDiagram() {
           LONGSHORE CURRENT
         </text>
 
-        {/* Rip current flow arrows (seaward) */}
+        {/* rip current flow arrows (seaward) */}
         <line x1="240" y1="265" x2="240" y2="110" stroke="#F97316" strokeWidth="3" markerEnd="url(#arrowRip)" filter="url(#glow)" />
         <line x1="220" y1="220" x2="220" y2="130" stroke="#F97316" strokeWidth="1.5" opacity="0.5" markerEnd="url(#arrowRip)" />
         <line x1="260" y1="220" x2="260" y2="130" stroke="#F97316" strokeWidth="1.5" opacity="0.5" markerEnd="url(#arrowRip)" />
@@ -180,7 +180,7 @@ export default function WhatIs() {
               {[
                 { icon: '⚡', title: 'Up to 8 ft/sec', desc: 'Speed of a rip current — faster than elite swimmers' },
                 { icon: '👁', title: 'Hard to see', desc: 'Invisible from water level; must be spotted from elevated ground' },
-                { icon: '🌊', title: 'All coasts', desc: 'Occurs on ocean beaches, but also Great Lakes, bays, and inlets' },
+                { icon: '🌊', title: 'All coasts', desc: 'Occurs on ocean beaches, but also [body of water / region], bays, and inlets' },
                 { icon: '📅', title: 'Year-round', desc: 'Not just summer — any wave-influenced body of water, any season' },
               ].map((f) => (
                 <div key={f.title} className="glass-card p-4 flex gap-4 items-start">

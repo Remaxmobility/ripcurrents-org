@@ -75,7 +75,7 @@ export default function Contact() {
               style={{ transitionDelay: '300ms' }}
             >
               <a
-                href="https://www.instagram.com/ripcurrent_information_project"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
@@ -90,7 +90,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-white font-body group-hover:text-ocean-teal transition-colors">
-                    @ripcurrent_information_project
+                    @[organization_handle]
                   </div>
                   <div className="text-xs text-ocean-foam/50 font-body">Follow us on Instagram</div>
                 </div>
@@ -104,8 +104,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-white font-body">Port Stanley, Ontario</div>
-                  <div className="text-xs text-ocean-foam/50 font-body">Great Lakes Region, Canada</div>
+                  <div className="text-sm font-semibold text-white font-body">[City, Province/State]</div>
+                  <div className="text-xs text-ocean-foam/50 font-body">[body of water / region] Region, Canada</div>
                 </div>
               </div>
             </div>

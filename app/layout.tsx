@@ -2,34 +2,35 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'RIP Currents Info | Know the Current. Save Your Life.',
+  title: 'Rip Current Information Project | Know the Current. Stay Safe.',
   description:
-    'Rip current education and awareness for the Great Lakes and beyond. Learn to identify, survive, and help prevent rip current drownings.',
+    'The Rip Current Information Project educates Canadians about rip current dangers on the Great Lakes. Learn to identify, survive, and help prevent rip current drownings.',
   keywords: [
     'rip current',
     'rip current safety',
     'Great Lakes drowning prevention',
     'rip current awareness',
-    'beach safety',
-    'ocean safety',
-    'flip float follow',
-    'Nathan MacIntyre',
+    'Ontario beach safety',
+    'Great Lakes safety',
+    'rip current education Canada',
+    'Lake Huron rip current',
+    'Lake Erie rip current',
   ],
   openGraph: {
-    title: 'RIP Currents Info — Know the Current. Save Your Life.',
+    title: 'Rip Current Information Project — Know the Current. Stay Safe.',
     description:
-      'Evidence-based rip current education for the Great Lakes and beyond.',
-    url: 'https://www.ripcurrents.org',
-    siteName: 'RIP Currents Info',
+      'Evidence-based rip current education for the Canadian Great Lakes.',
+    url: 'https://www.ripcurrentinfo.org',
+    siteName: 'Rip Current Information Project',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RIP Currents Info',
-    description: 'Know the Current. Save Your Life.',
+    title: 'Rip Current Information Project',
+    description: 'Know the Current. Stay Safe. Great Lakes rip current education.',
   },
   robots: { index: true, follow: true },
-  metadataBase: new URL('https://www.ripcurrents.org'),
+  metadataBase: new URL('https://www.ripcurrentinfo.org'),
 }
 
 export default function RootLayout({

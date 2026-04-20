@@ -20,20 +20,20 @@ function useInView(threshold = 0.1) {
 
 const RESEARCH_AREAS = [
   {
-    title: 'Physical Processes',
-    desc:  'Studying the physical mechanisms that create rip currents — water movement, wave energy, and coastal topography — through both field studies and numerical modelling at Great Lakes beaches.',
+    title: 'General Physical Processes',
+    desc:  'Studying the physical mechanisms that create hazards — water movement, wave energy, and coastal topography — through both field studies and numerical modelling at various bodies of water.',
     tag:   'Field Research',
     color: '#0096C7',
   },
   {
     title: 'Climate Change Impact',
-    desc:  'Investigating how rising water temperatures, lake level fluctuations, and increasing storm frequency affect the formation frequency and intensity of rip currents in vulnerable Great Lakes coastal areas.',
+    desc:  'Investigating how rising water temperatures, lake level fluctuations, and increasing storm frequency affect the formation frequency and intensity of hazards in vulnerable coastal areas.',
     tag:   'Climate Science',
     color: '#00B4D8',
   },
   {
     title: 'Public Education Efficacy',
-    desc:  'Researching the effectiveness of various public education campaigns on rip current safety — examining how different communication strategies influence beachgoer behaviour and understanding of risk.',
+    desc:  'Researching the effectiveness of various public education campaigns on hazard safety — examining how different communication strategies influence beachgoer behaviour and understanding of risk.',
     tag:   'Behavioural Research',
     color: '#48CAE4',
   },
@@ -65,54 +65,14 @@ export default function Research() {
             </div>
 
             <h2
-              className={`text-display-lg text-white mb-8 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: '100ms' }}
+              className={`text-display-lg text-white mb-8 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+              style={{ transitionDelay: '150ms' }}
             >
-              EVIDENCE-BASED{' '}
-              <span style={{ WebkitTextStroke: '2px #00B4D8', color: 'transparent' }}>RESEARCH</span>{' '}
-              &amp; ADVOCACY
+              Evidence-based advocacy for safer coastal communities
             </h2>
-
-            <div
-              className={`space-y-5 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-              style={{ transitionDelay: '200ms' }}
-            >
-              <p className="text-lg text-ocean-foam/80 font-body leading-relaxed">
-                The <strong className="text-white">Rip Current Information Project (RIP)</strong> is a
-                Canadian nonprofit founded by Nathan MacIntyre — an 18-season Great Lakes lifeguard from
-                Port Stanley, Ontario.
-              </p>
-              <p className="text-base text-ocean-foam/70 font-body leading-relaxed">
-                Motivated by the preventable drowning of his best friend in 1998, Nathan founded RIP
-                with one mission: <em className="text-ocean-teal">end rip current-related drowning through
-                understanding, education, and evidence-based public awareness.</em>
-              </p>
-              <p className="text-base text-ocean-foam/70 font-body leading-relaxed">
-                "A rip current can kill people. I don&apos;t just want to put up a few garage sale signs.
-                I want this to be a professional message." — <strong className="text-white">Nathan MacIntyre, Founder</strong>
-              </p>
-            </div>
-
-            {/* Founder card */}
-            <div
-              className={`mt-10 glass-card p-6 flex gap-5 items-start transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-              style={{ transitionDelay: '350ms' }}
-            >
-              <div className="w-14 h-14 rounded-full bg-ocean-mid flex items-center justify-center flex-shrink-0 border border-ocean-blue/30">
-                <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8">
-                  <circle cx="20" cy="14" r="7" stroke="#00B4D8" strokeWidth="1.5" />
-                  <path d="M 5 36 Q 12 26 20 28 Q 28 30 35 36" stroke="#00B4D8" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-                </svg>
-              </div>
-              <div>
-                <div className="font-body font-semibold text-white">Nathan MacIntyre</div>
-                <div className="text-xs text-ocean-teal font-body">Founder, RIP Currents Info</div>
-                <div className="text-xs text-ocean-foam/50 font-body mt-1">
-                  18-season Great Lakes lifeguard · Port Stanley, Ontario ·
-                  Member, Elgin County Drowning Prevention Coalition
-                </div>
-              </div>
-            </div>
+            <p className="text-sm text-ocean-foam/70 font-body leading-relaxed">
+              Join us in our mission to reduce the impact of hazards on people and the environment.
+            </p>
 
             {/* Instagram CTA */}
             <div
@@ -120,7 +80,7 @@ export default function Research() {
               style={{ transitionDelay: '450ms' }}
             >
               <a
-                href="https://www.instagram.com/ripcurrent_information_project"
+                href="https://www.instagram.com/coastal_hazard_info"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-ocean-blue/30 text-ocean-foam/70
@@ -131,7 +91,7 @@ export default function Research() {
                   <circle cx="12" cy="12" r="4.5" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
-                @ripcurrent_information_project
+                @coastal_hazard_info
               </a>
             </div>
           </div>
@@ -178,8 +138,8 @@ export default function Research() {
                 &ldquo;Root-based advocacy that&apos;s very much needed.&rdquo;
               </p>
               <p className="text-xs text-ocean-teal font-body font-semibold mt-3">
-                — Chris Houser, Professor, University of Waterloo
-                <span className="text-ocean-foam/40 font-normal"> · 20+ years rip current research</span>
+                — [Advisor Name], Professor, [University Name]
+                <span className="text-ocean-foam/40 font-normal"> · 20+ years hazard research</span>
               </p>
             </div>
           </div>

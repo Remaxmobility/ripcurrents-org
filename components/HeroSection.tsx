@@ -69,7 +69,7 @@ export default function HeroSection() {
                       transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
           style={{ transitionDelay: '300ms' }}
         >
-          Rip current education and awareness for the Great Lakes and beyond —
+          rip current education and awareness for the [body of water / region] and beyond —
           evidence-based research, public education, and advocacy to end preventable drowning.
         </p>
 
@@ -93,7 +93,7 @@ export default function HeroSection() {
                        hover:bg-ocean-teal/10 hover:border-ocean-teal hover:scale-105
                        active:scale-100 transition-all duration-200 cursor-pointer"
           >
-            What Is a Rip Current?
+            What Is a RIP CURRENT?
           </Link>
         </div>
       </div>

@@ -44,7 +44,7 @@ const STEPS = [
     color:  '#00B4D8',
     glow:   'rgba(0,180,216,0.4)',
     title:  'Float calmly — conserve energy',
-    body:   `Allow the current to carry you. Rip currents are typically narrow and will release
+    body:   `Allow the current to carry you. rip current are typically narrow and will release
              you within 50–100 metres of shore. Floating conserves energy, keeps your head above
              water, and gives you time to signal for help. Raise one arm to alert lifeguards or
              beachgoers.`,
@@ -114,7 +114,7 @@ export default function SurvivalGuide() {
           >
             IF YOU&apos;RE CAUGHT IN A{' '}
             <span style={{ WebkitTextStroke: '2px #F97316', color: 'transparent' }}>
-              RIP CURRENT
+              rip current
             </span>
           </h2>
 
@@ -123,7 +123,7 @@ export default function SurvivalGuide() {
             style={{ transitionDelay: '200ms' }}
           >
             <p className="text-4xl md:text-5xl font-display tracking-[0.15em] text-danger-orange danger-glow">
-              FLIP · FLOAT · FOLLOW
+              [Step 1] · [Step 2] · [Step 3]
             </p>
             <p className="text-sm text-ocean-foam/60 font-body mt-2">
               Three steps that save lives — remember them before you enter the water

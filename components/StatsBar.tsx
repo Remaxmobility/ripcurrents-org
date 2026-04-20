@@ -53,7 +53,7 @@ export default function StatsBar() {
         <div className="marquee-track whitespace-nowrap text-sm font-body text-danger-orange/80">
           {Array(6).fill(null).map((_, i) => (
             <span key={i} className="mx-8">
-              ⚠ RIP CURRENTS ARE THE #1 BEACH HAZARD &nbsp;•&nbsp; THEY CANNOT BE SEEN FROM UNDERWATER &nbsp;•&nbsp; KNOW BEFORE YOU GO &nbsp;•&nbsp; FLIP. FLOAT. FOLLOW. &nbsp;•
+              ⚠ [ORGANIZATION] ARE THE #1 BEACH HAZARD &nbsp;•&nbsp; THEY CAN BE DIFFICULT TO DETECT &nbsp;•&nbsp; KNOW BEFORE YOU GO &nbsp;•&nbsp; [Step 1]. [Step 2]. [Step 3]. &nbsp;•
             </span>
           ))}
         </div>

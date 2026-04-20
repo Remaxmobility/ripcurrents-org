@@ -2,17 +2,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const NAV = [
-  { label: 'What Is a Rip Current', href: '#what-is' },
-  { label: 'Survive: Flip Float Follow', href: '#survive' },
-  { label: 'How to Identify One', href: '#identify' },
-  { label: 'Our Research', href: '#research' },
-  { label: 'Consulting & Services', href: '#contact' },
+  { label: 'Learn: Rip Currents 101', href: '/learn' },
+  { label: 'Families', href: '/families' },
+  { label: 'Schools Program', href: '/schools' },
   { label: 'Resources', href: '/resources' },
+  { label: 'About the Project', href: '/about' },
+  { label: 'Get Involved', href: '/get-involved' },
 ]
 
 const EXTERNAL = [
-  { label: 'NOAA Rip Current Safety', href: 'https://oceanservice.noaa.gov/hazards/ripcurrents/' },
-  { label: 'USLA Beach Safety', href: 'https://www.usla.org/page/BEACHSAFETY' },
+  { label: 'NOAA GLERL — Coastal Hazards & Rip Currents', href: 'https://www.glerl.noaa.gov' },
+  { label: 'The Conversation — Great Lakes Rip Currents', href: 'https://theconversation.com/the-great-lakes-are-powerful-learning-about-rip-currents-can-help-prevent-drowning-183593' },
   { label: 'Swim Drink Fish Canada', href: 'https://swimdrinkfish.ca' },
   { label: 'Lifesaving Society Canada', href: 'https://www.lifesaving.org' },
 ]
@@ -33,29 +33,28 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
               <Image
                 src="/favicon.ico"
-                alt="RIP Currents logo"
+                alt="Rip Current Information Project logo"
                 width={36}
                 height={36}
                 className="object-contain group-hover:brightness-125 transition-all duration-300"
                 unoptimized
               />
               <div>
-                <span className="font-display text-xl text-white tracking-widest">RIP CURRENTS</span>
+                <span className="font-display text-xl text-white tracking-widest">RIP CURRENT INFO</span>
                 <span className="block text-xs text-ocean-teal/60 font-body tracking-wider -mt-1">
-                  ripcurrents.org
+                  ripcurrentinfo.org
                 </span>
               </div>
             </Link>
 
             <p className="text-sm text-ocean-foam/50 font-body leading-relaxed max-w-sm mb-6">
-              Endeavouring to create understanding of Great Lakes rip currents and end
-              rip current-related drowning through evidence-based research, education, and advocacy.
+              Saving lives through rip current education on the Great Lakes. Evidence-based research, school outreach, and community awareness across Ontario.
             </p>
 
             <div className="flex items-center gap-3">
               {/* Instagram */}
               <a
-                href="https://www.instagram.com/ripcurrent_information_project"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-ocean-teal/50 hover:text-ocean-teal transition-colors duration-200"
@@ -69,7 +68,7 @@ export default function Footer() {
               </a>
               {/* Facebook */}
               <a
-                href="https://www.facebook.com/ripcurrents.org"
+                href="https://www.facebook.com/ripcurrentinfo.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-ocean-teal/50 hover:text-ocean-teal transition-colors duration-200"
@@ -81,7 +80,7 @@ export default function Footer() {
               </a>
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/company/ripcurrents-org"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-ocean-teal/50 hover:text-ocean-teal transition-colors duration-200"
@@ -152,10 +151,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 border-t border-ocean-blue/10">
           <p className="text-xs text-ocean-foam/35 font-body">
-            © {new Date().getFullYear()} Rip Current Information Project (RIP) · Port Stanley, Ontario, Canada
+            © {new Date().getFullYear()} Rip Current Information Project · Ontario, Canada
           </p>
           <p className="text-xs text-ocean-foam/25 font-body">
-            Making access to rip current information easy.
+            Making rip current education accessible to every Great Lakes community.
           </p>
         </div>
       </div>

@@ -4,8 +4,8 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'About Rip Currents | RIP Currents Info',
-  description: 'Resources, research links, and external references for rip current safety and education.',
+  title: 'Rip Current Resources | Rip Current Information Project',
+  description: 'Resources, research links, and water safety organisations for rip current education on the Great Lakes.',
 }
 
 const RESOURCE_GROUPS = [
@@ -41,7 +41,7 @@ const RESOURCE_GROUPS = [
       },
       {
         name: 'Lifesaving Society Canada',
-        desc: 'Canadian national drowning prevention and water safety training organization.',
+        desc: 'Canadian national drowning prevention and water safety training organisation.',
         href: 'https://www.lifesaving.org',
       },
       {
@@ -62,7 +62,7 @@ const RESOURCE_GROUPS = [
     resources: [
       {
         name: 'Rip Current Research — University of Waterloo',
-        desc: 'Prof. Chris Houser\'s lab — 20+ years of rip current formation and Great Lakes research.',
+        desc: "Prof. Chris Houser's lab — 20+ years of rip current formation and Great Lakes research.",
         href: 'https://uwaterloo.ca',
       },
       {
@@ -73,7 +73,7 @@ const RESOURCE_GROUPS = [
       {
         name: 'The Conversation — Great Lakes Rip Currents',
         desc: 'Accessible research article: "The Great Lakes are powerful — learning about rip currents can help prevent drowning."',
-        href: 'https://theconversation.com',
+        href: 'https://theconversation.com/the-great-lakes-are-powerful-learning-about-rip-currents-can-help-prevent-drowning-183593',
       },
     ],
   },
@@ -105,8 +105,7 @@ export default function ResourcesPage() {
               </span>
             </h1>
             <p className="text-ocean-foam/70 font-body text-base leading-relaxed max-w-2xl mx-auto">
-              A curated collection of rip current safety resources, research links, and water safety
-              organizations to help you learn more and stay safe.
+              A curated collection of rip current safety resources, research links, and water safety organisations to help you learn more and stay safe.
             </p>
           </div>
         </section>
