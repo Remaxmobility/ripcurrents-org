@@ -17,7 +17,17 @@ const EXTERNAL = [
   { label: 'Lifesaving Society Canada', href: 'https://www.lifesaving.org' },
 ]
 
-export default function Footer() {
+interface Props {
+  tagline?: string
+  instagramUrl?: string
+  copyrightExtra?: string
+}
+
+export default function Footer({ tagline, instagramUrl, copyrightExtra }: Props) {
+  const bio       = tagline       || 'Saving lives through rip current education on the Great Lakes. Evidence-based research, school outreach, and community awareness across Ontario.'
+  const igUrl     = instagramUrl  || '#'
+  const copyright = copyrightExtra || 'Ontario, Canada'
+
   return (
     <footer className="relative bg-ocean-abyss border-t border-ocean-blue/15 overflow-hidden">
       {/* Top wave */}
@@ -48,13 +58,13 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm text-ocean-foam/50 font-body leading-relaxed max-w-sm mb-6">
-              Saving lives through rip current education on the Great Lakes. Evidence-based research, school outreach, and community awareness across Ontario.
+              {bio}
             </p>
 
             <div className="flex items-center gap-3">
               {/* Instagram */}
               <a
-                href="#"
+                href={igUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-ocean-teal/50 hover:text-ocean-teal transition-colors duration-200"
@@ -151,7 +161,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 border-t border-ocean-blue/10">
           <p className="text-xs text-ocean-foam/35 font-body">
-            © {new Date().getFullYear()} Rip Current Information Project · Ontario, Canada
+            © {new Date().getFullYear()} Rip Current Information Project · {copyright}
           </p>
           <p className="text-xs text-ocean-foam/25 font-body">
             Making rip current education accessible to every Great Lakes community.

@@ -8,22 +8,52 @@ import Research from '@/components/sections/Research'
 import Services from '@/components/sections/Services'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/Footer'
+import { supabase } from '@/lib/supabase'
 
-export default function Home() {
+async function getSiteContent(): Promise<Record<string, string>> {
+  try {
+    const { data } = await supabase.from('site_content').select('key, value')
+    const content: Record<string, string> = {}
+    for (const row of data || []) content[row.key] = row.value
+    return content
+  } catch {
+    return {}
+  }
+}
+
+export default async function Home() {
+  const content = await getSiteContent()
+
   return (
     <>
       <Nav />
       <main>
-        <HeroSection />
-        <StatsBar />
+        <HeroSection
+          subtitle={content.hero_subtitle}
+          ctaPrimary={content.hero_cta_primary}
+          ctaSecondary={content.hero_cta_secondary}
+          headline1={content.hero_headline_1}
+          headline2={content.hero_headline_2}
+          headline3={content.hero_headline_3}
+        />
+        <StatsBar tickerText={content.marquee_text} />
         <WhatIs />
         <SurvivalGuide />
         <HowToIdentify />
         <Research />
         <Services />
-        <Contact />
+        <Contact
+          instagramHandle={content.contact_instagram_handle}
+          instagramUrl={content.contact_instagram_url}
+          location={content.contact_location}
+          locationSub={content.contact_location_sub}
+        />
       </main>
-      <Footer />
+      <Footer
+        tagline={content.footer_tagline}
+        instagramUrl={content.contact_instagram_url}
+        copyrightExtra={content.footer_copyright_extra}
+      />
     </>
   )
 }

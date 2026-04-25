@@ -17,13 +17,36 @@ const HeroScene = dynamic(() => import('./HeroScene'), {
   ),
 })
 
-export default function HeroSection() {
+interface Props {
+  subtitle?: string
+  ctaPrimary?: string
+  ctaSecondary?: string
+  headline1?: string
+  headline2?: string
+  headline3?: string
+}
+
+export default function HeroSection({
+  subtitle,
+  ctaPrimary,
+  ctaSecondary,
+  headline1,
+  headline2,
+  headline3,
+}: Props) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 200)
     return () => clearTimeout(t)
   }, [])
+
+  const line1 = headline1 || 'KNOW THE'
+  const line2 = headline2 || 'CURRENT.'
+  const line3 = headline3 || 'SAVE YOUR LIFE.'
+  const sub   = subtitle   || 'Rip current education and awareness for the Great Lakes region and beyond — evidence-based research, public education, and advocacy to end preventable drowning.'
+  const cta1  = ctaPrimary   || 'Learn to Survive'
+  const cta2  = ctaSecondary || 'What Is a Rip Current?'
 
   return (
     <section className="relative w-full h-screen min-h-[640px] overflow-hidden">
@@ -51,15 +74,15 @@ export default function HeroSection() {
                       transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           style={{ transitionDelay: '150ms' }}
         >
-          <span className="block">KNOW THE</span>
+          <span className="block">{line1}</span>
           <span
             className="block"
             style={{ WebkitTextStroke: '2px #00B4D8', color: 'transparent', textShadow: 'none' }}
           >
-            CURRENT.
+            {line2}
           </span>
           <span className="block text-white" style={{ textShadow: '0 0 40px rgba(0,180,216,0.4)' }}>
-            SAVE YOUR LIFE.
+            {line3}
           </span>
         </h1>
 
@@ -69,8 +92,7 @@ export default function HeroSection() {
                       transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
           style={{ transitionDelay: '300ms' }}
         >
-          rip current education and awareness for the [body of water / region] and beyond —
-          evidence-based research, public education, and advocacy to end preventable drowning.
+          {sub}
         </p>
 
         {/* CTAs */}
@@ -85,7 +107,7 @@ export default function HeroSection() {
                        shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105
                        active:scale-100 transition-all duration-200 cursor-pointer"
           >
-            Learn to Survive
+            {cta1}
           </Link>
           <Link
             href="#what-is"
@@ -93,7 +115,7 @@ export default function HeroSection() {
                        hover:bg-ocean-teal/10 hover:border-ocean-teal hover:scale-105
                        active:scale-100 transition-all duration-200 cursor-pointer"
           >
-            What Is a RIP CURRENT?
+            {cta2}
           </Link>
         </div>
       </div>

@@ -18,10 +18,22 @@ function useInView(threshold = 0.1) {
   return { ref, visible }
 }
 
-export default function Contact() {
+interface Props {
+  instagramHandle?: string
+  instagramUrl?: string
+  location?: string
+  locationSub?: string
+}
+
+export default function Contact({ instagramHandle, instagramUrl, location, locationSub }: Props) {
   const { ref, visible } = useInView()
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [form, setForm] = useState({ name: '', org: '', email: '', message: '' })
+
+  const igHandle = instagramHandle || '@ripcurrentinfo'
+  const igUrl    = instagramUrl    || '#'
+  const loc      = location        || '[City, Province/State]'
+  const locSub   = locationSub     || '[Great Lakes Region], Canada'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -75,7 +87,7 @@ export default function Contact() {
               style={{ transitionDelay: '300ms' }}
             >
               <a
-                href="#"
+                href={igUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
@@ -90,7 +102,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-white font-body group-hover:text-ocean-teal transition-colors">
-                    @[organization_handle]
+                    {igHandle}
                   </div>
                   <div className="text-xs text-ocean-foam/50 font-body">Follow us on Instagram</div>
                 </div>
@@ -104,8 +116,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-white font-body">[City, Province/State]</div>
-                  <div className="text-xs text-ocean-foam/50 font-body">[body of water / region] Region, Canada</div>
+                  <div className="text-sm font-semibold text-white font-body">{loc}</div>
+                  <div className="text-xs text-ocean-foam/50 font-body">{locSub}</div>
                 </div>
               </div>
             </div>
