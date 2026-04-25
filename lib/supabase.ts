@@ -9,11 +9,19 @@ function getSupabaseUrl() {
   return url
 }
 
+const noStoreOptions = {
+  global: {
+    fetch: (url: RequestInfo | URL, opts?: RequestInit) =>
+      fetch(url, { ...opts, cache: 'no-store' }),
+  },
+}
+
 export const supabase = (() => {
   if (!_supabase) {
     _supabase = createClient(
       getSupabaseUrl(),
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-anon-key'
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-anon-key',
+      noStoreOptions
     )
   }
   return _supabase
@@ -23,7 +31,8 @@ export const supabaseAdmin = (() => {
   if (!_supabaseAdmin) {
     _supabaseAdmin = createClient(
       getSupabaseUrl(),
-      process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-service-key'
+      process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-service-key',
+      noStoreOptions
     )
   }
   return _supabaseAdmin
