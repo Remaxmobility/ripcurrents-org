@@ -82,7 +82,9 @@ const STEPS = [
   },
 ]
 
-export default function SurvivalGuide() {
+interface Props { callout?: string }
+
+export default function SurvivalGuide({ callout }: Props) {
   const { ref, visible } = useInView()
 
   return (
@@ -123,7 +125,7 @@ export default function SurvivalGuide() {
             style={{ transitionDelay: '200ms' }}
           >
             <p className="text-4xl md:text-5xl font-display tracking-[0.15em] text-danger-orange danger-glow">
-              [Step 1] · [Step 2] · [Step 3]
+              {callout || 'FLIP · FLOAT · FOLLOW'}
             </p>
             <p className="text-sm text-ocean-foam/60 font-body mt-2">
               Three steps that save lives — remember them before you enter the water

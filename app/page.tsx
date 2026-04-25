@@ -37,10 +37,15 @@ export default async function Home() {
           headline3={content.hero_headline_3}
         />
         <StatsBar tickerText={content.marquee_text} />
-        <WhatIs />
-        <SurvivalGuide />
+        <WhatIs bodyOfWater={content.whatis_body_of_water} />
+        <SurvivalGuide callout={content.survival_callout} />
         <HowToIdentify />
-        <Research />
+        <Research
+          instagramHandle={content.research_instagram_handle}
+          instagramUrl={content.research_instagram_url}
+          quoteText={content.research_quote_text}
+          quoteAttribution={content.research_quote_attribution}
+        />
         <Services />
         <Contact
           instagramHandle={content.contact_instagram_handle}

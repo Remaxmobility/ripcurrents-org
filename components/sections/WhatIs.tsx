@@ -117,7 +117,9 @@ function RipCurrentDiagram() {
   )
 }
 
-export default function WhatIs() {
+interface Props { bodyOfWater?: string }
+
+export default function WhatIs({ bodyOfWater }: Props) {
   const { ref, visible } = useInView()
 
   return (
@@ -180,7 +182,7 @@ export default function WhatIs() {
               {[
                 { icon: '⚡', title: 'Up to 8 ft/sec', desc: 'Speed of a rip current — faster than elite swimmers' },
                 { icon: '👁', title: 'Hard to see', desc: 'Invisible from water level; must be spotted from elevated ground' },
-                { icon: '🌊', title: 'All coasts', desc: 'Occurs on ocean beaches, but also [body of water / region], bays, and inlets' },
+                { icon: '🌊', title: 'All coasts', desc: `Occurs on ocean beaches, but also ${bodyOfWater || 'Great Lakes'}, bays, and inlets` },
                 { icon: '📅', title: 'Year-round', desc: 'Not just summer — any wave-influenced body of water, any season' },
               ].map((f) => (
                 <div key={f.title} className="glass-card p-4 flex gap-4 items-start">

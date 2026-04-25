@@ -39,7 +39,19 @@ const RESEARCH_AREAS = [
   },
 ]
 
-export default function Research() {
+interface Props {
+  instagramHandle?: string
+  instagramUrl?: string
+  quoteText?: string
+  quoteAttribution?: string
+}
+
+export default function Research({ instagramHandle, instagramUrl, quoteText, quoteAttribution }: Props) {
+  const igHandle = instagramHandle || '@ripcurrentinfo'
+  const igUrl    = instagramUrl    || 'https://www.instagram.com/ripcurrentinfo'
+  const quote    = quoteText       || 'Root-based advocacy that\'s very much needed.'
+  const attr     = quoteAttribution || '— Advisor, Professor, University'
+
   const { ref, visible } = useInView()
 
   return (
@@ -80,7 +92,7 @@ export default function Research() {
               style={{ transitionDelay: '450ms' }}
             >
               <a
-                href="https://www.instagram.com/coastal_hazard_info"
+                href={igUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-ocean-blue/30 text-ocean-foam/70
@@ -91,7 +103,7 @@ export default function Research() {
                   <circle cx="12" cy="12" r="4.5" />
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
-                @coastal_hazard_info
+                {igHandle}
               </a>
             </div>
           </div>
@@ -135,11 +147,10 @@ export default function Research() {
               style={{ transitionDelay: '600ms', background: 'rgba(0,119,182,0.05)' }}
             >
               <p className="text-ocean-foam/70 font-body text-sm leading-relaxed italic">
-                &ldquo;Root-based advocacy that&apos;s very much needed.&rdquo;
+                &ldquo;{quote}&rdquo;
               </p>
               <p className="text-xs text-ocean-teal font-body font-semibold mt-3">
-                — [Advisor Name], Professor, [University Name]
-                <span className="text-ocean-foam/40 font-normal"> · 20+ years hazard research</span>
+                {attr}
               </p>
             </div>
           </div>
