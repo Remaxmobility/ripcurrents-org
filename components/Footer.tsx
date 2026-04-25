@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { supabase } from '@/lib/supabase'
 
 const NAV = [
   { label: 'Learn: Rip Currents 101', href: '/learn' },
@@ -24,23 +23,10 @@ interface Props {
   copyrightExtra?: string
 }
 
-async function getFooterContent() {
-  try {
-    const { data } = await supabase
-      .from('site_content')
-      .select('key, value')
-      .in('key', ['footer_tagline', 'footer_copyright_extra', 'contact_instagram_url'])
-    const c: Record<string, string> = {}
-    for (const row of data || []) c[row.key] = row.value
-    return c
-  } catch { return {} }
-}
-
-export default async function Footer({ tagline, instagramUrl, copyrightExtra }: Props) {
-  const db        = (!tagline && !instagramUrl && !copyrightExtra) ? await getFooterContent() : {}
-  const bio       = tagline       ?? db.footer_tagline       ?? 'Saving lives through rip current education on the Great Lakes. Evidence-based research, school outreach, and community awareness across Ontario.'
-  const igUrl     = instagramUrl  ?? db.contact_instagram_url ?? '#'
-  const copyright = copyrightExtra ?? db.footer_copyright_extra ?? 'Ontario, Canada'
+export default function Footer({ tagline, instagramUrl, copyrightExtra }: Props) {
+  const bio       = tagline        ?? 'Saving lives through rip current education on the Great Lakes. Evidence-based research, school outreach, and community awareness across Ontario.'
+  const igUrl     = instagramUrl   ?? '#'
+  const copyright = copyrightExtra ?? 'Ontario, Canada'
 
   return (
     <footer className="relative bg-ocean-abyss border-t border-ocean-blue/15 overflow-hidden">

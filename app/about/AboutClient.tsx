@@ -175,7 +175,11 @@ export default function AboutClient({ content: c }: Props) {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer
+        tagline={c.footer_tagline}
+        instagramUrl={c.contact_instagram_url}
+        copyrightExtra={c.footer_copyright_extra}
+      />
     </>
   )
 }
